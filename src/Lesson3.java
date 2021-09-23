@@ -4,8 +4,8 @@ public class Lesson3 {
 
     public static void main(String[] args) {
         //создаются две строки, которые буду проверяться на анаграмму
-        String str1 = " AisT anAgraMm one Y";
-        String str2 = "InstAgrAm Aa MoNeY";
+        String str1 = " AisT anAgraMm one Y ";
+        String str2 = "InstAgrAm Aa  MoNeY";
 
         String s1 = str1.toLowerCase().replaceAll(" ", "");
         String s2 = str2.toLowerCase().replaceAll(" ", "");
