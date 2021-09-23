@@ -9,17 +9,24 @@ public class Lesson3 {
 
         String s1 = str1.toLowerCase().replaceAll(" ", "");
         String s2 = str2.toLowerCase().replaceAll(" ", "");
+        boolean isAnagram = false;
 
-        //перевод строк в массивы символов
-        char[] char1 = s1.toCharArray();
-        char[] char2 = s2.toCharArray();
+        //условие равенства длины строк после преобразований
+        if (s1.length() == s2.length()) {
+            //перевод строк в массивы символов
+            char[] char1 = s1.toCharArray();
+            char[] char2 = s2.toCharArray();
 
-        //сортировка массивов по символам
-        Arrays.sort(char1);
-        Arrays.sort(char2);
+            //сортировка массивов по символам
+            Arrays.sort(char1);
+            Arrays.sort(char2);
 
-        //сравнение новых строк с отсортированными символами
-        if (Arrays.equals(char1, char2)) {
+            //проверка являются ли строки анаграммами
+            isAnagram = Arrays.equals(char1, char2);
+        }
+
+        //вывод результата проверки
+        if (isAnagram) {
             System.out.println("Строки \"" + str1 + "\" и \"" + str2 + "\" являются анаграммой");
         }
         else {
